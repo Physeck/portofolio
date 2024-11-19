@@ -2,13 +2,26 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
     line-height: inherit;
+    height: 300vh;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 .navbar{
     display: flex;
     padding: 1.5rem 1.75rem 1.75rem 1.5rem;
     background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: transform 0.7s ease-in-out;
     /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+}
+
+.navbar.slideup{
+    transform: translateY(-100%);
 }
 
 .navbar__header-container{
@@ -26,6 +39,12 @@ body{
     color: transparent;
     transition: transform 0.3s;
     animation: crimsonred 0.5s linear infinite;
+}
+
+.user-select-none {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    user-select: none !important;
 }
     .header--font:hover{
         transform: translateY(-0.35rem);
