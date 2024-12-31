@@ -17,7 +17,11 @@ html{
     top: 0;
     z-index: 100;
     transition: transform 0.7s ease-in-out;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.075);
+}
+
+h1{
+    margin: 1vh;
 }
 
 .navbar.slideup{
@@ -51,16 +55,16 @@ html{
     }
     @keyframes crimsonred {
         0% {
-            background-image:linear-gradient(120deg, #661b1c, #000000);
+            background-image:linear-gradient(120deg, #b30d10, #000000);
         }
         20% {
-            background-image: linear-gradient(to bottom, #520000, #3d0000);
+            background-image: linear-gradient(to bottom, #ff0202, #3d0000);
         }
         40% {
             background-image: linear-gradient(120deg, #3d0000, #290000);
         }
         60% {
-            background-image: linear-gradient(120deg, #290000, #140000);
+            background-image: linear-gradient(120deg, #6e0808, #140000);
         }
         80% {
             background-image: linear-gradient(120deg, #140000, #3d0909);
@@ -91,14 +95,69 @@ html{
 .navbar--item{
     text-decoration: none;    
     font-weight: 600;
-    color:#531516 ;
+    color:#3d0000;
     transition-duration: 0.2s;
 }
 
     .navbar--item:hover{
-        background-image: linear-gradient(to bottom, #531516, #000000);    
+        background-image: linear-gradient(to bottom, #ff0004, #3c0000);    
         -webkit-background-clip: text;
         font-weight: 700;
         color: transparent;
-
     }
+
+.navbar--item.active{
+    background-image: linear-gradient(to bottom, #ff0004, #3c0000);    
+    -webkit-background-clip: text;
+    font-weight: 700;
+    color: transparent;
+}
+
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2.5rem 0.5rem 2.5rem;
+}
+
+.slider__text{
+    font-size: 10rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #3d0000;
+    margin: 0 !important;
+}
+
+.slider{
+    display: inline;
+    text-align: center;
+    position: relative;
+    animation: slide-in 1.5s ease-out;
+    transition: color 0.3s ease;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+    .slider::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 10px;
+        background-color: #810000;
+        transition: width 0.3s ease;
+    }
+
+    .slider:hover::after{
+        width: 100%;
+    }
+
+
