@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
 });
 
 // TYPING TEXT ANIMATION
-const texts = ["Front-end Developer", "Fullstack Developer", "Software Engineer"];
+const texts = ["Front-end Developer", "Web Developer", "Fullstack Developer", "Software Engineer"];
 
 let textIndex = 0;
 let charIndex = 0;
@@ -69,7 +69,7 @@ const observer = new IntersectionObserver(
         });
     },
     {
-        threshold: 0.5
+        threshold: 0.3
     }
 );
 

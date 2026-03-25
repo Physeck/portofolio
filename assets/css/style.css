@@ -25,7 +25,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #0ea5e9, #4f46e5);
+    background: #a8a8a8;
 }
 
 ::-webkit-scrollbar-corner {
@@ -104,6 +104,9 @@ h1 {
     }
 }
 
+.font-light {
+    font-weight: 200;
+}
 
 .navbar__nav {
     display: flex;
@@ -148,7 +151,25 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2.5rem 0.5rem 2.5rem;
-    min-height: 90vh;
+    min-height: 80vh;
+    transition: opacity 1s ease, transform 1s ease;
+
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.5s
+}
+
+.fade-section.hidden {
+    opacity: 0;
+    transform: translateY(-50px);
 }
 
 .home-left {
@@ -318,26 +339,21 @@ h1 {
 
 .university-img:hover {
     transform: scale(1.1);
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+
 }
 
 
-.section {
-    min-height: 100vh;
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
 
-.fade-section {
-    opacity: 0;
-    transform: translateY(50px);
-}
 
-.fade-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
-.fade-section.hidden {
-    opacity: 0;
-    transform: translateY(-50px);
-}
+
+
+
+
+
