@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
 });
 
 // TYPING TEXT ANIMATION
-const texts = ["Front-end Developer", "Web Developer", "Fullstack Developer", "Software Engineer"];
+const texts = ["Web Developer.", "Fullstack Developer.", "Software Engineer."];
 
 let textIndex = 0;
 let charIndex = 0;
@@ -69,10 +69,19 @@ const observer = new IntersectionObserver(
         });
     },
     {
-        threshold: 0.3
+        threshold: 0.4
     }
 );
 
 sections.forEach((section) => {
     observer.observe(section);
 });
+
+const images = document.querySelectorAll(".carousel-img");
+let index = 0;
+
+setInterval(() => {
+    images[index].classList.remove("active");
+    index = (index + 1) % images.length;
+    images[index].classList.add("active");
+}, 3000);
