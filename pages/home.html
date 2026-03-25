@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Justin Physeck</title>
+    <title>Justin Physeck - Portofolio</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
-        <nav class="navbar">
-            <div class="navbar__header-container">
-                <a class="header--font user-select-none">Justin</a>
-            </div>
-            
-            <div class="navbar__links-container">
-                <ul class="navbar__nav">
-                    <li class="navbar__links-space"><a class="navbar--item" href="#home">Home</a></li>
-                    <li class="navbar__links-space"><a class="navbar--item" href="#about">About</a></li>
-                    <li class="navbar__links-space"><a class="navbar--item" href="#projects">Projects</a></li>
-                    <li class="navbar__links-space"><a class="navbar--item" href="#connect">Connect</a></li>      
-                </ul>  
-            </div>
-        </nav>
-        <section id="home" class="home-container">
-            <div class="slider user-select-none"> 
-                <h1 class="slider__text">Hello!</h1>
-            </div>    
-            <h1>My Name is <span>Justin Tjandra</span></h1>
-            <h1>I'm currently a <span>Computer Science Undergraduate</span></h1>
-            <h1>at... <span>BINUS University</span></h1>
-            <!-- <span>Justin Tjandra</span> -->
-        </section>
 
-        <section id="about">
-        </section>
-        
-        <section id="projects">
-        </section>
-        
-        <section id="connect">
-        </section>
+<body>
+    <nav class="navbar">
+        <div class="navbar__header-container">
+            <a class="header--font user-select-none">Justin</a>
+        </div>
+
+        <div class="navbar__links-container">
+            <ul class="navbar__nav">
+                <li class="navbar__links-space"><a class="navbar--item" href="#home">Home</a></li>
+                <li class="navbar__links-space"><a class="navbar--item" href="#about">About</a></li>
+                <li class="navbar__links-space"><a class="navbar--item" href="#projects">Projects</a></li>
+                <li class="navbar__links-space"><a class="navbar--item" href="#connect">Connect</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="home" class="box-container section fade-section">
+        <div class="home-left">
+            <div class="slider user-select-none">
+                <h1 class="slider__text">
+                    <span>Hello!</span>
+                </h1>
+            </div>
+
+            <div class="home-box-container">
+                <h1>My Name is <span>Justin Tjandra</span></h1>
+                <h1>I'm a <span class="span-headline__text">Computer Science</span> Freshgraduate from...</h1>
+                <div class="university-img-container">
+                    <img src="/assets/images/Logo_Binus_University.png" alt="BINUS University" class="university-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="img-container">
+            <div class="img-flip">
+                <div class="img-front">
+                    <img src="/assets/images/user_profile.jpeg" alt="Justin Tjandra" class="user-img">
+                </div>
+                <div class="img-back">
+                    <img src="/assets/images/user_profile.jpeg" alt="Justin Tjandra" class="user-img">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="about" class="box-container section fade-section">
+        <h1>About me</h1>
+        <h1 id="typing-text"></h1>
+    </section>
+
+    <section id="projects" class="box-container section fade-section">
+        <h1>My Projects</h1>
+    </section>
+
+    <section id="connect" class="box-container section fade-section">
+        <h1>Let's connect!</h1>
+    </section>
 </body>
 <script src="../assets/js/script.js"></script>
+
 </html>
