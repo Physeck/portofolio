@@ -89,11 +89,9 @@ setInterval(() => {
 const backToTopBtn = document.getElementById("backToTop");
 
 window.addEventListener("scroll", () => {
-    // Calculate how far down the user is
     const scrollPosition = window.innerHeight + window.pageYOffset;
     const pageHeight = document.documentElement.scrollHeight;
 
-    // Trigger when user is within 50px of the bottom
     if (scrollPosition >= pageHeight - 50) {
         backToTopBtn.classList.add("active");
     } else {
@@ -101,7 +99,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Smooth scroll to top functionality
 backToTopBtn.addEventListener("click", () => {
     window.scrollTo({
         top: 0,
