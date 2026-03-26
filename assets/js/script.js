@@ -85,3 +85,26 @@ setInterval(() => {
     index = (index + 1) % images.length;
     images[index].classList.add("active");
 }, 3000);
+
+const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    // Calculate how far down the user is
+    const scrollPosition = window.innerHeight + window.pageYOffset;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    // Trigger when user is within 50px of the bottom
+    if (scrollPosition >= pageHeight - 50) {
+        backToTopBtn.classList.add("active");
+    } else {
+        backToTopBtn.classList.remove("active");
+    }
+});
+
+// Smooth scroll to top functionality
+backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});

@@ -51,6 +51,10 @@ html {
     font-size: 2.3rem;
 }
 
+.fs-xl {
+    font-size: 3rem;
+}
+
 .navbar {
     display: flex;
     padding: 1rem 1.75rem;
@@ -164,6 +168,9 @@ html {
 
 .cv-button {
     background-color: #3c0000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: white;
     padding: 0.6rem 1.2rem;
     border-radius: 12px;
@@ -177,6 +184,11 @@ html {
     transform: translateY(-2px);
 }
 
+.cv-icon {
+    width: 18px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
 
 .box-container {
     display: flex;
@@ -187,14 +199,11 @@ html {
     transition: opacity 1s ease, transform 1s ease;
 }
 
-#home {
+#home,
+#connect,
+#projects {
     padding: 1rem 2.5rem;
 }
-
-#connect {
-    padding: 1rem 2.5rem;
-}
-
 
 .fade-section {
     opacity: 0;
@@ -504,6 +513,108 @@ html {
 }
 
 
+/* Projects */
+.box-container#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-text {
+    font-size: 5rem;
+    color: #3d0000;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.project-card {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #000;
+}
+
+.project-card-link {
+    margin: 1rem 0;
+    padding: 5px;
+    text-decoration: none;
+    color: inherit;
+    background-color: rgba(34, 34, 34, 0.5);
+    border-radius: 8px;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.project-card-link:hover {
+    background-color: rgba(129, 0, 0, 0.5);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    padding: 1rem;
+}
+
+.project-img-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-img-overlay img {
+    width: 40px;
+    height: auto;
+}
+
+.project-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    transform: translateY(20px);
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img {
+    filter: blur(8px);
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-name {
+    transform: translateY(0);
+}
+
 
 
 
@@ -516,6 +627,7 @@ html {
 .connect-title {
     font-size: 3rem;
     margin-bottom: 1.5rem;
+    text-shadow: 0 4px 15px rgba(129, 0, 0, 0.3);
 }
 
 .connect-description {
@@ -571,4 +683,37 @@ html {
 
 .social-item a:hover {
     color: #810000;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    padding: 0.8rem 1.5rem;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #3c0000;
+    transform: translateX(-50%) translateY(-3px);
+}
+
+.arrow {
+    margin-right: 5px;
 }
