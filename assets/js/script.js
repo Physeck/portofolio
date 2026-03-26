@@ -15,7 +15,7 @@ window.addEventListener('scroll', () => {
 });
 
 // TYPING TEXT ANIMATION
-const texts = ["Web Developer.", "Fullstack Developer.", "Software Engineer."];
+const texts = ["Web Developer.", "Fullstack Developer.", "Software Developer."];
 
 let textIndex = 0;
 let charIndex = 0;
