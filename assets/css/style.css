@@ -44,7 +44,7 @@ html {
 }
 
 .fs-md {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .fs-lg {
@@ -203,6 +203,8 @@ html {
 #connect,
 #projects {
     padding: 1rem 2.5rem;
+    cursor: default;
+
 }
 
 .fade-section {
@@ -487,8 +489,45 @@ html {
 
 .about-content-text {
     flex: 1;
-    margin-right: 200px;
-    text-align: justify;
+    margin: 0 40px;
+}
+
+.about-content-text p {
+    color: #555;
+    text-align: center;
+}
+
+.about-content-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 40px;
+}
+
+.exp-card {
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    width: 240px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.exp-card h4 {
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+}
+
+.exp-card span {
+    font-size: 13px;
+    color: #888;
+}
+
+.exp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .about-content-image-wrapper {
