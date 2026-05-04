@@ -1,6 +1,26 @@
 // NAVBAR SHOW / HIDE ON SCROLL
 let lastScrollY = window.scrollY;
 const navbar = document.querySelector('.navbar');
+const navToggle = document.querySelector('.nav-toggle');
+
+// MOBILE TOGGLE NAV
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        const open = navbar.classList.toggle('navbar--open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.classList.toggle('nav-open', open);
+    });
+
+    // close menu when clicking a nav link
+    const navLinks = document.querySelectorAll('.navbar__nav a');
+    navLinks.forEach(link => link.addEventListener('click', () => {
+        if (navbar.classList.contains('navbar--open')) {
+            navbar.classList.remove('navbar--open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('nav-open');
+        }
+    }));
+}
 
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
@@ -9,6 +29,12 @@ window.addEventListener('scroll', () => {
         navbar.classList.add('slideup');
     } else {
         navbar.classList.remove('slideup');
+    }
+
+    if (navbar.classList.contains('navbar--open')) {
+        navbar.classList.remove('navbar--open');
+        navToggle?.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
     }
 
     lastScrollY = currentScrollY;

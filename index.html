@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justin Tjandra - Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <nav class="navbar">
+        <button class="nav-toggle" aria-label="Toggle menu">☰</button>
         <div class="navbar__header-container">
             <a class="header--font user-select-none">Justin</a>
         </div>
@@ -33,35 +38,40 @@
     </nav>
 
     <section id="home" class="box-container fade-section">
-        <div class="home-left">
-            <div class="slider user-select-none">
-                <h1 class="slider__text">
-                    <span>Hello!</span>
-                </h1>
+        <div class="home-container-big">
+            <div class="home-left">
+                <div class="slider user-select-none">
+                    <h1 class="slider__text">
+                        <span>Hello!</span>
+                    </h1>
+                </div>
+
+                <div class="home-container">
+                    <p class="fs-lg">My Name is <span class="font-bolder">Justin Tjandra</span></p>
+                    <p class="fs-lg">I'm a<span class="span-headline__text font-bolder">Computer
+                            Science</span>Freshgraduate
+                        from...</p>
+                    <div class="university-img-container">
+                        <img src="assets/images/icons/Logo_Binus_University.png" alt="BINUS University"
+                            class="university-img">
+                    </div>
+                </div>
+                <h1 class="fs-lg hero-h1 font-semibold">and I am a...</h1>
             </div>
 
-            <div class="home-container">
-                <p class="fs-lg">My Name is <span class="font-bolder">Justin Tjandra</span></p>
-                <p class="fs-lg">I'm a<span class="span-headline__text font-bolder">Computer Science</span>Freshgraduate
-                    from...</p>
-                <div class="university-img-container">
-                    <img src="assets/images/icons/Logo_Binus_University.png" alt="BINUS University"
-                        class="university-img">
+            <div class="img-container">
+                <div class="img-flip">
+                    <div class="img-front">
+                        <img src="assets/images/pict/user_profile.jpeg" alt="Justin Tjandra" class="user-img">
+                    </div>
+                    <div class="img-back">
+                        <img src="assets/images/pict/user_profile.jpeg" alt="Justin Tjandra" class="user-img">
+                    </div>
                 </div>
             </div>
-            <h1 class="font-light">and I am a...</h1>
+
         </div>
 
-        <div class="img-container">
-            <div class="img-flip">
-                <div class="img-front">
-                    <img src="assets/images/pict/user_profile.jpeg" alt="Justin Tjandra" class="user-img">
-                </div>
-                <div class="img-back">
-                    <img src="assets/images/pict/user_profile.jpeg" alt="Justin Tjandra" class="user-img">
-                </div>
-            </div>
-        </div>
     </section>
 
     <section id="about" class="box-container fade-section">
@@ -151,8 +161,7 @@
                         <img src="assets/images/icons/Postgresql_elephant.svg" alt="PostgreSQL">
                         <img src="assets/images/icons/Figma.png" alt="Figma">
                     </div>
-                    <a class="project-card-link" target="_blank"
-                        href="https://studilib.vercel.app">Click
+                    <a class="project-card-link" target="_blank" href="https://studilib.vercel.app">Click
                         me to view!</a>
                 </div>
             </div>
